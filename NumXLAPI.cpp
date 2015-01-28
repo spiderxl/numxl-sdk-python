@@ -38,7 +38,7 @@ extern "C" static PyObject* py_myFunction(PyObject* self, PyObject* args)
 /*
 * Bind Python function names to our C functions
 */
-static PyMethodDef myModule_methods[] = {
+static PyMethodDef myNumXLAPI_methods[] = {
     { "myFunction", py_myFunction, METH_VARARGS },
     { NULL, NULL }
 };
@@ -47,8 +47,8 @@ static PyMethodDef myModule_methods[] = {
 /*
 * Python calls this to let us initialize our module
 */
-extern "C"  void initmyModule()
+extern "C"  void initNumXLAPI()
 {
-  (void)Py_InitModule("myModule", myModule_methods);
+  (void)Py_InitModule("NumXLAPI", myNumXLAPI_methods);
 }
 
